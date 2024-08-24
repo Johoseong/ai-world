@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ai-world
+
+#  ai:
+#    openai:
+#      api-key: KEY입력필요
