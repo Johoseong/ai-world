@@ -1,4 +1,4 @@
-package com.example.ai_world
+package com.example.ai_world.adapter.`in`
 
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.web.bind.annotation.PostMapping
