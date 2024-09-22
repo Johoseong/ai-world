@@ -1,4 +1,4 @@
-package com.example.ai_world.adapter.`in`
+package com.example.ai_world.adapter.out.config
 
 import org.springframework.ai.chat.client.ChatClient
 import org.springframework.context.annotation.Bean

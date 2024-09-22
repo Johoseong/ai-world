@@ -16,9 +16,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
 
-    implementation(project(":application:domain"))
-    implementation(project(":application:port-in"))
-    implementation(project(":application:port-out"))
+//    implementation(project(":application:domain"))
+//    implementation(project(":application:port-in"))
+//    implementation(project(":application:port-out"))
     implementation(project(":adapter:adapter-in"))
     implementation(project(":adapter:adapter-out"))
 
