@@ -1,3 +1,5 @@
+import org.springframework.boot.gradle.tasks.bundling.BootJar
+
 plugins {
     kotlin("jvm")
     kotlin("plugin.spring")
@@ -21,3 +23,7 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
+
+val bootJar: BootJar by tasks
+
+bootJar.enabled = false

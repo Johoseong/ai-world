@@ -23,28 +23,17 @@ java {
 
 repositories {
 	mavenCentral()
-	maven { url = uri("https://repo.spring.io/milestone") }
 }
-
-//extra["springAiVersion"] = "1.0.0-M1"
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-//	implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
-
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
-
-//dependencyManagement {
-//	imports {
-//		mavenBom("org.springframework.ai:spring-ai-bom:${property("springAiVersion")}")
-//	}
-//}
 
 kotlin {
 	compilerOptions {
@@ -56,8 +45,6 @@ tasks.withType<Test> {
 	useJUnitPlatform()
 }
 
-val jar: Jar by tasks
 val bootJar: BootJar by tasks
 
 bootJar.enabled = false
-jar.enabled = true

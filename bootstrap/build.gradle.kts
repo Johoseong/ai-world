@@ -1,5 +1,3 @@
-import org.springframework.boot.gradle.tasks.bundling.BootJar
-
 plugins {
     kotlin("jvm")
     kotlin("plugin.spring")
@@ -13,14 +11,11 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":adapter-in"))
+    implementation(project(":adapter-out"))
+
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.ai:spring-ai-openai-spring-boot-starter")
-
-//    implementation(project(":application:domain"))
-//    implementation(project(":application:port-in"))
-//    implementation(project(":application:port-out"))
-    implementation(project(":adapter:adapter-in"))
-    implementation(project(":adapter:adapter-out"))
 
     testImplementation(kotlin("test"))
 }
@@ -39,9 +34,3 @@ tasks.test {
 kotlin {
     jvmToolchain(21)
 }
-
-val jar: Jar by tasks
-val bootJar: BootJar by tasks
-
-bootJar.enabled = false
-jar.enabled = true
